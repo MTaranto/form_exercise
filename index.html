@@ -4,9 +4,100 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Formulário</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap" rel="stylesheet">
+<style>
+  body {
+    background-image: url(assets/images/coding_bg.jpg);
+    background-size: cover;
+  }
+</style>
 </head>
 <body>
+  <div class="bg_body">
+    <div class="title">
+      <h1>Cadastro de novos DEV's</h1>
+      <p>Insira seus dados nos campos abaixo</p>
+    </div>
+    <div class="field">
+      <form action="./cadastro.html" method="POST">
+        <fieldset>
+          <legend>Dados Pessoais</legend>
+          <label>
+            Nome: *<br>
+            <input type="text" name="name" required placeholder="Digite apenas o primeiro nome">
+          </label>
+          <label>
+            Sobrenome: <br>
+            <input type="text" name="lastname">
+          </label>
+          <label>
+            E-mail: *<br>
+            <input type="email" name="email" required>
+          </label>
+          <label>
+            Data de Nascimento: *<br>
+            <input type="date" name="birthday">
+          </label>
+          <label>
+            Idade: <br>
+            <input type="number" name="age" min="12" max="100" required>
+          </label>
+          <p style="text-align: end;">
+          <b>* Preenchimento obrigatório</b>
+          </p>
+        </fieldset>
+      </div>
+      <fieldset>
+        <legend>Experiência</legend>
+        <div class="field">
+          <label style="font-weight: normal;">
+            <strong>De qual lado da aplicação você desenvolve?</strong><br>
+            <input type="radio" name="appside" value="frontend" checked> Front-end
+            <input type="radio" name="appside" value="backend"> Back-end
+            <input type="radio" name="appside" value="fullstack"> FullStack
+          </label>
+        </div>
+        <div class="field">
+          <label>
+            Senioridade:<br>
+            <select>
+              <option selected disabled value="">Selecione</option>
+              <option>Júnior</option>
+              <option>Pleno</option>
+              <option>Senior</option>
+            </select>
+          </label>
+        </div>
+        <div class="check">
+          <label>
+            <strong>Selecione as tecnologias que utiliza:</strong><br>
+            <input type="checkbox" name="tech1" value="HTML">
+            <label>HTML</label>
+            <input type="checkbox" name="tech2" value="CSS">
+            <label>CSS</label>
+            <input type="checkbox" name="tech3" value="JavaScript">
+            <label>JavaScript</label>
+            <input type="checkbox" name="tech4" value="Python">
+            <label>Pytohn</label>
+            <input type="checkbox" name="tech5" value="PHP">
+            <label>PHP</label>
+            <input type="checkbox" name="tech6" value="C#">
+            <label>C#</label>
+            <input type="checkbox" name="tech7" value="Java">
+            <label>Java</label>
+          </label>
+        </div>
+          <label>Fale sobre sua experiência:</label><br>
+          <textarea name="experience" id="experience" cols="30" rows="10"></textarea>
+      </fieldset>
+        <button>Concluir</button>
+      </form>
+    </div>
+  </div>
   
 </body>
 </html>
